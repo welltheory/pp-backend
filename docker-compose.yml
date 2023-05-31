@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    container_name: wt-api
+    image: pairprogramming/api
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - DATABASE_URL
+    command: node dist/index.js
+    ports:
+      - "3030:3030"
+    env_file:
+      - .env
