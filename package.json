@@ -18,7 +18,7 @@
     "node": ">16.0.0",
     "npm": ">8.0.0"
   },
-  "author": "Pairprogramminh",
+  "author": "Pairprogramming",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^4.15.0",
