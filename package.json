@@ -6,24 +6,13 @@
   "private": true,
   "scripts": {
     "start": "prisma migrate deploy && node --max-old-space-size=4096 ./dist/index.js",
-    "start:test": "dotenv -e .env.test -- tsx ./index.ts",
-    "test": "start-test --expect 200 start:test http://localhost:3031/healthcheck jest",
-    "test:mock": "node ./jest/mock.js",
     "jest": "jest --config ./jest/config.ts --runInBand --forceExit",
     "dev": "dotenv -e .env -- nodemon",
     "build": "rm -rf ./dist && tsc -p tsconfig.build.json",
     "prisma:migrate": "dotenv -e .env -- prisma migrate dev",
     "prisma:generate": "dotenv -e .env -- prisma generate",
-    "test:prisma:migrate": "dotenv -e .env.test -- prisma migrate dev",
-    "test:prisma:migrate:reset": "dotenv -e .env.test -- prisma migrate reset --force",
-    "test:prisma:generate": "dotenv -e .env.test -- prisma generate",
-    "git": "git diff && tsx ./scripts/git/index.ts",
     "db:create": "node ./scripts/db/create.js",
-    "db:drop": "node ./scripts/db/drop.js",
-    "db:reset": "node ./scripts/db/reset.js",
-    "db:migrate:undo": "node ./scripts/db/migrations/undo.js",
-    "db:migrate": "node ./scripts/db/migrations/perform.js",
-    "scratchpad": "dotenv -e .env -- tsx ./scratchpad.ts"
+    "db:reset": "node ./scripts/db/reset.js"
   },
   "engines": {
     "node": ">16.0.0",
