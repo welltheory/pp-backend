@@ -1,0 +1,30 @@
+version: '3.1'
+
+name: wt-pp
+services:
+  postgres_dev:
+    image: postgres:14
+    container_name: postgres-dev
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: wt-pp-dev
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data
+  postgres_tests:
+    image: postgres:14
+    container_name: postgres-tests
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: wt-pp-tests
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data_tests:/var/lib/postgresql/data
+
+volumes:
+  postgres_data_tests:
+  postgres_data_dev:

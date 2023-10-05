@@ -1,0 +1,41 @@
+{
+  "ts-node": {
+    "esm": true
+  },
+  "compilerOptions": {
+    "target": "ES2016",                                  
+    "lib": ["ES6"],                                        
+    "module": "CommonJS",                                
+    "rootDir": "./",                                  
+    "moduleResolution": "Node",                       
+    "baseUrl": "./",                                  
+    "paths": {
+      "$api/*": ["./api/*"],
+      "$prisma": ["./prisma"],
+      "$prisma/*": ["./prisma/*"],
+      "$services": ["./services"],
+      "$services/*": ["./services/*"],
+      "$utils": ["./utils"],
+      "$utils/*": ["./utils/*"],
+      "$errors": ["./errors"],
+      "$errors/*": ["./errors/*"],
+      "$envs": ["./envs"],
+      "$envs/*": ["./envs/*"],
+      "$tests/utils": ["./tests/utils"],
+      "$tests/utils/*": ["./tests/utils/*"]
+    },                                                                    
+    "resolveJsonModule": true,                        
+    "allowJs": true,
+    "outDir": "./dist",                                   
+    "inlineSourceMap": true,                          
+    "isolatedModules": true,                          
+    "allowSyntheticDefaultImports": true,             
+    "esModuleInterop": true,                             
+    "forceConsistentCasingInFileNames": true,            
+    "strict": true,                                      
+    "noImplicitAny": false,                            
+    "noImplicitReturns": false,                        
+    "noImplicitOverride": false,                       
+    "skipLibCheck": true                                 
+  }
+}
