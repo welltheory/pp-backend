@@ -17,7 +17,7 @@
 
 ### Tasks
 Search for `TODO:` in the code to find the tasks that need to be completed.
-Start from the ones defined in `.env` and `.env.test`
+Hint: Start from the ones defined in `.env` and `.env.test`
 
 ### Submission Instructions
 1. **Clone the Repository**: Clone this repository to your local machine.
