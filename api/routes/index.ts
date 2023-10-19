@@ -5,11 +5,17 @@ import webhooks from './webhooks';
 const router = express.Router();
 
 // TODO:
-// Following the currently applied patterns, implement the following endpoints:
-// 1. GET /healthcheck endpoint that returns a 200 OK
-// 2. GET /users/me endpoint that returns the currently-logged-in user's id, email and membership status.
-//    Hint: The currently-logged-in user is available under req.user (see api/middlewares/auth.ts)
-
+// Implement the following endpoints according to the given requirements and hints.
+//
+// 1. GET /healthcheck: 
+//    - Returns a 200 OK status. 
+//    - Example response: { message: 'OK' }
+//
+// 2. GET /users/me:
+//    - Requires authentication middleware (see api/middlewares/auth.ts).
+//    - Returns the currently-logged-in user's id, email, and membership status in JSON format.
+//    - Example response: { id: 1, email: 'user@example.com', membershipStatus: 'active' }
+//    - Hint: The currently-logged-in user can be accessed using req.user.
 router.use('/payments', payments);
 router.use('/wh', webhooks);
 

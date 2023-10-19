@@ -1,5 +1,7 @@
+import prisma from '$prisma/client';
+
 // TODO:
-// Remove the placeholder & add tests
+// Add tests for the Subscription event listeners defined in ./services/stripe/listeners/subscriptions.ts
 it('placeholder', () => {
-  expect(true).toEqual(true);
+  expect(true).toEqual(false);
 });

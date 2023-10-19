@@ -4,7 +4,6 @@ import Stripe from '$services/stripe';
 import * as StripeTypes from '$services/stripe/types';
 import * as EventListeners from '$services/stripe/listeners';
 
-
 export const post = async (req: Req, res: Res, next: Next) => {
   try { 
     const signature = req.get('stripe-signature')!;
